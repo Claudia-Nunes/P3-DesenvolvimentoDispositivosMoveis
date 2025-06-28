@@ -1,26 +1,51 @@
+Fake News Detection API 🚀
 
-# Fake News API
+Este projeto implementa uma API em Python com FastAPI para detectar notícias falsas usando um classificador Naive Bayes treinado em dados de exemplo.
 
-## Como rodar
+Como usar
 
-1. Instale dependências:
-```
+1️⃣ Instale as dependências:
+
 pip install -r requirements.txt
-```
 
-2. Treine o modelo:
-```
+2️⃣ Treine o modelo:
+
 python train_model.py
-```
 
-3. Rode a API:
-```
+3️⃣ Rode o servidor:
+
 uvicorn app.main:app --reload
-```
 
-Acesse em http://127.0.0.1:8000/docs
+A API estará disponível em http://127.0.0.1:8000/docs (Swagger).
 
-## Endpoints
-- POST /api/classificar-noticia
-- GET /api/historico
-- GET /api/status
+Endpoints
+
+POST /api/classificar-noticia → envia o texto e obtém a classificação
+
+GET /api/historico → lista o histórico das notícias classificadas
+
+GET /api/status → mostra o status do modelo e quantidade de itens no histórico
+
+
+Estrutura de diretórios
+
+fake-news-api/
+  app/main.py
+  models/
+  data/exemplo.csv
+  train_model.py
+  requirements.txt
+  README.md
+
+Próximos passos sugeridos
+
+✅ Integrar LIME/SHAP para explicações visuais
+✅ Ajustar para outros idiomas
+✅ Empacotar via Docker
+✅ Trocar para modelos mais robustos como BERT/RoBERTa
+
+
+---
+
+Projeto acadêmico — Fatec Jacareí, 2025.
+
